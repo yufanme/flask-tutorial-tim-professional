@@ -1,0 +1,10 @@
+{% extends "parent.html" %}
+{% block title %}
+    <h1>USER DATABASE VIEW</h1>
+{% endblock %}
+
+{% block content %}
+    {% for item in values %}
+        <p>UserName: {{ item.username }}, Email: {{ item.email }}</p>
+    {% endfor %}
+{% endblock %}

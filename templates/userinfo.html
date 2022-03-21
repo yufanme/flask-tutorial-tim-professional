@@ -10,4 +10,8 @@
         {% endif %}
     {% endwith %}
     <h1>It is {{ user }}'s personal page!</h1>
+    <form action="{{ url_for('userinfo') }}" method="post">
+    <input type="email" placeholder="Enter Email" name="email" value="{{ email if email }}">
+    <input type="submit" value="submit">
+    </form>
 {% endblock %}
